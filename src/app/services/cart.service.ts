@@ -2,7 +2,7 @@
 import { CartItem, Product } from 'src/app/models/product';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { cartApiUrl } from '../config/api';
+import { cartApiUrl, productsApiUrl } from '../config/api';
 import { Observable, map } from 'rxjs';
 
 @Injectable({
@@ -43,8 +43,16 @@ addBookToCart(productItem: CartItem): Observable<CartItem> {
   return this.http.post<CartItem>(cartApiUrl, productItem)
 }
 
-testToCart(): Observable<number> {
-  return this.http.post<number>(cartApiUrl, 1)
+// testToCart(): Observable<number> {
+//   return this.http.post<number>(cartApiUrl, {book: 1})
+// }
+
+deleteBookFromCart(productItem: CartItem): Observable<CartItem> {
+  const url = `${productsApiUrl}/${productItem.id}`
+  console.log(url);
+
+
+  return this.http.delete<CartItem>(url);
 }
 
 }

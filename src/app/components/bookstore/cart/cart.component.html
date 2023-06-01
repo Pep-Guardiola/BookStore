@@ -9,11 +9,14 @@
 
   <ul *ngIf="cartItems.length > 0" class="list-group list-group-flush">
     <li class="list-group-item" *ngFor="let item of cartItems">
-      <app-cart-item [cartItem]="item"></app-cart-item>
+      <app-cart-item
+        [cartItem]="item"
+        (deleteClicked)="onDelete($event)"
+      ></app-cart-item>
     </li>
   </ul>
 
   <div class="card-footer">
-    <strong>Total {{ 1000 | currency : "SEK" }}</strong>
+    <strong>Total {{ cartTotal | currency : "SEK " }}</strong>
   </div>
 </div>

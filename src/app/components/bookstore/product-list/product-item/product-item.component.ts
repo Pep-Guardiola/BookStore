@@ -39,7 +39,14 @@ export class ProductItemComponent implements OnInit {
     //   this.msgService.sendMsg(this.cartItem)
     // })
 
-    this.cartService.testToCart().subscribe()
+    // this.cartService.testToCart().subscribe()
+
+    const selectedCartItem = {...this.productItem};
+    delete selectedCartItem.id;
+
+    this.cartService.addBookToCart(selectedCartItem).subscribe((res)  => {
+        this.msgService.sendMsg(selectedCartItem)
+      })
 
   }
 

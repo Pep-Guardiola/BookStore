@@ -15,6 +15,9 @@ import { FavoritesComponent } from './components/bookstore/favorites/favorites.c
 import { TopListComponent } from './components/bookstore/top-list/top-list.component';
 import { ProductItemComponent } from './components/bookstore/product-list/product-item/product-item.component';
 import { CartItemComponent } from './components/bookstore/cart/cart-item/cart-item.component';
+import { BookManagerComponent } from './components/book-manager/book-manager.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,20 @@ import { CartItemComponent } from './components/bookstore/cart/cart-item/cart-it
     FavoritesComponent,
     TopListComponent,
     ProductItemComponent,
-    CartItemComponent
+    CartItemComponent,
+    BookManagerComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'products', component: BookstoreComponent },
+      { path: 'bookmanager', component: BookManagerComponent },
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' }
+
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

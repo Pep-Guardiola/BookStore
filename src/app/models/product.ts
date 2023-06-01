@@ -1,3 +1,21 @@
+// export class Product {
+
+//   constructor(
+//     public productId?: number,
+//     public title: string = '',
+//     public author: string = '',
+//     public price?: number,
+//     public description: string = '',
+//     public imageUrl: string = '',
+//     public starRating?: number,
+//     public topList: boolean = false,
+//     public qty?: number,
+//     public id?: number) { }
+// }
+
+
+
+
 export interface Product {
   id?: number,
   productId: number,
@@ -6,14 +24,13 @@ export interface Product {
   price: number,
   description: string,
   imageUrl: string,
-  starRating: string,
+  starRating: number,
   topList: boolean,
-  quote1: string,
-  quote2: string,
   qty: number
 }
 
 export interface CartItem {
+  id?: number,
   productId: number,
   title: string,
   author: string,

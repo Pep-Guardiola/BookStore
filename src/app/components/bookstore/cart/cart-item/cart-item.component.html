@@ -2,4 +2,7 @@
   <span>{{ cartItem.title }}</span> x <span> {{ cartItem.qty }}</span
   >:
   <strong>{{ cartItem.qty * cartItem.price | currency : "SEK " }}</strong>
+  <button type="button" class="btn" (click)="deleteBtnClicked()">
+    <i class="fa-solid fa-square-xmark"></i>
+  </button>
 </div>

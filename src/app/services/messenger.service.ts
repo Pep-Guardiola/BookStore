@@ -13,7 +13,8 @@ export class MessengerService {
   constructor() { }
 
   sendMsg(product: CartItem) {
-    console.log('sendMsg()'+product);
+    console.log(product);
+
     this.subject.next(product)
   }
 

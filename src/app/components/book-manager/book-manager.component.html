@@ -1,0 +1,100 @@
+<div class="container">
+  <h1 class="mb-4 mt-4">Bookstore manager</h1>
+  <form #bookForm="ngForm">
+    {{ bookForm.value | json }}
+    <hr />
+    {{ productItem | json }}
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="ProductId"
+        name="productId"
+        [(ngModel)]="productItem.productId"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Title"
+        name="title"
+        [(ngModel)]="productItem.title"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Author"
+        name="author"
+        [(ngModel)]="productItem.author"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Price in SEK"
+        name="price"
+        [(ngModel)]="productItem.price"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Description"
+        name="description"
+        [(ngModel)]="productItem.description"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Link to cover image"
+        name="imageUrl"
+        [(ngModel)]="productItem.imageUrl"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Star rating"
+        name="starRating"
+        [(ngModel)]="productItem.starRating"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Quantity in cart"
+        name="qty"
+        [(ngModel)]="productItem.qty"
+      />
+    </div>
+    <div class="form-check mb-3">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        name="topList"
+        [(ngModel)]="productItem.topList"
+      />
+      <label class="form-check-label">Top list</label>
+    </div>
+    <div class="mb-4 mt-4 form-group">
+      <button
+        type="submit"
+        class="btn btn-success me-3"
+        (click)="handleAddBook(bookForm)"
+      >
+        Add book
+      </button>
+    </div>
+  </form>
+  <button id="saveEdit" class="btn btn-primary">Save edits</button>
+</div>
