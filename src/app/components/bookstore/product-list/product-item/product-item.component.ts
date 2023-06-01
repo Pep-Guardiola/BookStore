@@ -3,14 +3,12 @@ import { CartItem, Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { MessengerService } from 'src/app/services/messenger.service';
 
-
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.css']
+  styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent implements OnInit {
-
   @Input() productItem!: Product;
 
   imageHeight: number = 280;
@@ -19,14 +17,13 @@ export class ProductItemComponent implements OnInit {
 
   constructor(
     private msgService: MessengerService,
-    private cartService: CartService) {}
+    private cartService: CartService
+  ) {}
 
-  ngOnInit(): void {
-
-    }
+  ngOnInit(): void {}
 
   handleAddToCart() {
-  //  console.log('handleAddToCart pressed. ProductItem is' +JSON.stringify(this.productItem));
+    //  console.log('handleAddToCart pressed. ProductItem is' +JSON.stringify(this.productItem));
     // this.cartItem = {
     //   author: this.productItem.author,
     //   price: this.productItem.price,
@@ -41,13 +38,11 @@ export class ProductItemComponent implements OnInit {
 
     // this.cartService.testToCart().subscribe()
 
-    const selectedCartItem = {...this.productItem};
+    const selectedCartItem = { ...this.productItem };
     delete selectedCartItem.id;
 
-    this.cartService.addBookToCart(selectedCartItem).subscribe((res)  => {
-        this.msgService.sendMsg(selectedCartItem)
-      })
-
+    this.cartService.addBookToCart(selectedCartItem).subscribe((res) => {
+      this.msgService.sendMsg(selectedCartItem);
+    });
   }
-
 }

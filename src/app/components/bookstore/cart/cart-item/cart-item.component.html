@@ -1,7 +1,9 @@
 <div class="cart-item">
-  <span>{{ cartItem.title }}</span> x <span> {{ cartItem.qty }}</span
+  <span>{{ cartItem.book.title }}</span> x <span> {{ cartItem.book.qty }}</span
   >:
-  <strong>{{ cartItem.qty * cartItem.price | currency : "SEK " }}</strong>
+  <strong>{{
+    cartItem.book.qty * cartItem.book.price | currency : "SEK "
+  }}</strong>
   <button type="button" class="btn" (click)="deleteBtnClicked()">
     <i class="fa-solid fa-square-xmark"></i>
   </button>

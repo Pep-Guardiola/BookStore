@@ -13,27 +13,28 @@
 //     public id?: number) { }
 // }
 
-
-
-
 export interface Product {
-  id?: number,
-  productId: number,
-  title: string,
-  author: string,
-  price: number,
-  description: string,
-  imageUrl: string,
-  starRating: number,
-  topList: boolean,
-  qty: number
+  id?: number;
+  book: {
+    productId: number;
+    title: string;
+    author: string;
+    price: number;
+    description: string;
+    imageUrl: string;
+    starRating: number;
+    topList: boolean;
+    qty: number;
+  };
 }
 
 export interface CartItem {
-  id?: number,
-  productId: number,
-  title: string,
-  author: string,
-  price: number,
-  qty: number
+  id?: number;
+  book: {
+    productId: number;
+    title: string;
+    author: string;
+    price: number;
+    qty: number;
+  };
 }

@@ -1,0 +1,135 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "products": [
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 203,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 1
+    },
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 207,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 2
+    },
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 276,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 3
+    },
+    {
+      "book": {
+        "productId": "test",
+        "title": "TestTitle",
+        "author": "ifhio",
+        "price": 206,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 203,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 6
+    },
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 207,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 9
+    },
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 276,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 10
+    },
+    {
+      "book": {
+        "productId": 101,
+        "title": "",
+        "author": "",
+        "price": 203,
+        "description": "",
+        "imageUrl": "",
+        "starRating": 4.5,
+        "qty": 1,
+        "topList": false
+      },
+      "id": 11
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

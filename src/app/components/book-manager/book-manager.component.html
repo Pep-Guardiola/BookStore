@@ -11,7 +11,7 @@
         class="form-control mb-2"
         placeholder="ProductId"
         name="productId"
-        [(ngModel)]="productItem.productId"
+        [(ngModel)]="productItem.book.productId"
       />
     </div>
     <div class="form-group">
@@ -20,7 +20,7 @@
         class="form-control mb-2"
         placeholder="Title"
         name="title"
-        [(ngModel)]="productItem.title"
+        [(ngModel)]="productItem.book.title"
       />
     </div>
     <div class="form-group">
@@ -29,7 +29,7 @@
         class="form-control mb-2"
         placeholder="Author"
         name="author"
-        [(ngModel)]="productItem.author"
+        [(ngModel)]="productItem.book.author"
       />
     </div>
     <div class="form-group">
@@ -38,7 +38,7 @@
         class="form-control mb-2"
         placeholder="Price in SEK"
         name="price"
-        [(ngModel)]="productItem.price"
+        [(ngModel)]="productItem.book.price"
       />
     </div>
     <div class="form-group">
@@ -47,7 +47,7 @@
         class="form-control mb-2"
         placeholder="Description"
         name="description"
-        [(ngModel)]="productItem.description"
+        [(ngModel)]="productItem.book.description"
       />
     </div>
     <div class="form-group">
@@ -56,7 +56,7 @@
         class="form-control mb-2"
         placeholder="Link to cover image"
         name="imageUrl"
-        [(ngModel)]="productItem.imageUrl"
+        [(ngModel)]="productItem.book.imageUrl"
       />
     </div>
     <div class="form-group">
@@ -65,7 +65,7 @@
         class="form-control mb-2"
         placeholder="Star rating"
         name="starRating"
-        [(ngModel)]="productItem.starRating"
+        [(ngModel)]="productItem.book.starRating"
       />
     </div>
     <div class="form-group">
@@ -74,7 +74,7 @@
         class="form-control mb-2"
         placeholder="Quantity in cart"
         name="qty"
-        [(ngModel)]="productItem.qty"
+        [(ngModel)]="productItem.book.qty"
       />
     </div>
     <div class="form-check mb-3">
@@ -82,7 +82,7 @@
         type="checkbox"
         class="form-check-input"
         name="topList"
-        [(ngModel)]="productItem.topList"
+        [(ngModel)]="productItem.book.topList"
       />
       <label class="form-check-label">Top list</label>
     </div>
